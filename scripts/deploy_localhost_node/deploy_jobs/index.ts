@@ -17,19 +17,3 @@ const deployTestJob : any = async () => {
 }
 
 deployTestJob()
-
-// const deployAirBattleJob : any = async () => {
-
-//     console.log(metadata)
-
-//     const createJobArgs = {
-//         oracleAddress: metadata.oracleAddress,
-//         jobType: "direct",
-//         authToken: metadata.authToken
-//     }
-    
-//     createAirBattleJob(createJobArgs)
-
-// }
-
-// deployAirBattleJob()

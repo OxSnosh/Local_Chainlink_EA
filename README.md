@@ -23,6 +23,8 @@ The operator sends the answer to the smart contract
 
 In order to use this repo you need to have Docker installed
 
+I used node version 20.16.0
+
 To get started run
 
 ``` git clone https://github.com/OxSnosh/Local_Chainlink_EA.git```
