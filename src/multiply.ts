@@ -8,16 +8,16 @@ dotenv.config();
 type EAInput = {
   requestId: number | string;
   data: {
-    numberToMultiply: number
+    inputNumber: number
   };
 };
 
 type EAOutput = {
   requestId: string | number;
-  statusCode: number;
   data: {
     product: number
   };
+  statusCode: number;
   error?: string;
 };
 
@@ -31,17 +31,22 @@ app.get("/", function (req: Request, res: Response) {
 });
 
 app.post("/", async function (req: Request<{}, {}, EAInput>, res: Response) {
-  const eaInputData: EAInput = req.body;
-  console.log("Request data received: ", eaInputData);
 
-    let answer = eaInputData.data.numberToMultiply * 1000
+  const eaInputData: EAInput = req.body;
+  // console.log("Request data received: ", eaInputData);
+
+    let answer = eaInputData.data.inputNumber * 1000
+
+    console.log("Answer: ", answer);
+    console.log("Request ID: ", eaInputData.requestId);
+    console.log("other Request ID: ", req.body.requestId);
 
     let eaResponse: EAOutput = {
+    requestId: req.body.requestId,
     data: {
       product: answer,
     },
-    requestId: eaInputData.requestId,
-    statusCode: 0,
+    statusCode: 200,
   };
 
   try {

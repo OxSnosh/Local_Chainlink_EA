@@ -1,7 +1,6 @@
-//St8kraft © 2022 by OxSnosh is licensed under Attribution-NonCommercial-NoDerivatives 4.0 International
+import { network, ethers } from "hardhat"
 import { expect } from "chai"
-import { network } from "hardhat"
-import { ethers } from "hardhat"
+import "@nomiclabs/hardhat-ethers"
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/dist/src/signer-with-address"
 import { Test } from "../typechain-types"
 import { LinkToken } from '../typechain-types/@chainlink/contracts/src/v0.4/LinkToken';
