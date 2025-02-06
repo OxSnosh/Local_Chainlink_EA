@@ -82,3 +82,7 @@ In a 4th terminal run the following.
 ```yarn hardhat test --network localhost```
 
 You should see the activity in the server window and the node and the test result. I wasn't sure how to await the callback from the oracle in the test itself, but in the hardhat node window you should see the product of 5000 (or whatever number you multilpied) coming back from the node.
+
+If it doesnt work right away you will need to redeploy the node, fund it again, deploy the bride and job and rerun the test. In this version of hardhat chainlink the chainlink node stops synching with the hardhat node after 5 minutes. I think this problem was fixed in a later version of hardhat-chainlink but im not sure. If you do it all in 5 minutes you should be good.
+
+Hit me up with any questions.
